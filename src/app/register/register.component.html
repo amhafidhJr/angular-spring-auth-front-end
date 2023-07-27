@@ -1,0 +1,74 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Registration Form</mat-card-title>
+                    <!-- <mat-card-subtitle>Start</mat-card-subtitle> -->
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="row mt-5">
+                        <div class="col-md-12">
+                            <form [formGroup]="regForm">
+                                <mat-form-field appearance="outline"
+                                    class="input-style">
+                                    <mat-label>First Name</mat-label>
+                                    <input matInput placeholder="First Name"
+                                        type="text"
+                                        formControlName="firstName">
+                                    <mat-icon matSuffix>person_pin</mat-icon>
+                                    <mat-error
+                                        *ngIf="regForm.get('firstName')?.hasError('required')">
+                                        This field is required
+                                    </mat-error>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline"
+                                    class="input-style">
+                                    <mat-label>Last Name</mat-label>
+                                    <input matInput placeholder="Last Name"
+                                        type="text"
+                                        formControlName="lastName">
+                                    <mat-icon matSuffix>person_pin</mat-icon>
+                                    <mat-error
+                                        *ngIf="regForm.get('lastName')?.hasError('required')">
+                                        This field is required
+                                    </mat-error>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline"
+                                    class="input-style">
+                                    <mat-label>Email</mat-label>
+                                    <input matInput placeholder="Email"
+                                        type="email"
+                                        formControlName="email">
+                                    <mat-icon matSuffix>email</mat-icon>
+                                    <mat-error
+                                        *ngIf="regForm.get('email')?.hasError('required')">
+                                        This field is required
+                                    </mat-error>
+                                </mat-form-field>
+                                <mat-form-field appearance="outline"
+                                    class="input-style">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput placeholder="Password"
+                                        type="password"
+                                        formControlName="password">
+                                    <mat-icon matSuffix>lock</mat-icon>
+                                    <mat-error
+                                        *ngIf="regForm.get('password')?.hasError('required')">
+                                        This field is required
+                                    </mat-error>
+                                </mat-form-field>
+                            </form>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary" (click)="register()" class="btn-style">Register</button>
+                    <!-- <button mat-button>SHARE</button> -->
+                </mat-card-actions>
+            </mat-card>
+            <br>
+
+        </div>
+    </div>
+</div>

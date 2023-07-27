@@ -1,0 +1,14 @@
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-toolbar>
+                <span> Authentication </span>
+                <span class="example-spacer"></span>
+                <button mat-flat-button color="primary"
+                    routerLink="/registration">Register</button>
+                <button class="btn_style" *ngIf="isLoggedIn()" mat-flat-button color="accent"
+                   (click)="logOut()">Logout</button>
+            </mat-toolbar>
+        </div>
+    </div>
+</div>
